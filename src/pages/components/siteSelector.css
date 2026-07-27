@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "Quicksand";
+    src:
+        local(Quicksand),
+        url(./assets/Quicksand-Font/Quicksand-VariableFont_wght.ttf);
+}
+
+.site-selector {
+    font-family: "Quicksand";
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.15in;
+    border-width: 0.017in;
+    border-style: solid;
+    border-color: rgba(73, 73, 73, 0.24);
+    height: 0.77in;
+    width: 18.5%;
+    background-color: rgba(36, 36, 36, 0.514);
+}
+
+.bar-button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 77.5%;
+    width: 20%;
+    border-color: rgba(73, 73, 73, 0.24);
+    background-color: #282a2b94;
+    border-radius: 0.12in;
+}
+
+a {
+    color: rgb(209, 209, 209);
+    text-decoration: none;
+}

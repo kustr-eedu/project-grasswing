@@ -1,0 +1,24 @@
+.task-creator {
+    margin-left: auto;
+    margin-right: auto;
+    height: 3ic (auto);
+    display: flex;
+    background-color: rgba(59, 0, 30, 0.67);
+    color: rgba(204, 204, 204, 0.67);
+}
+
+input {
+    width: 1.75in;
+    height: 0.25in;
+}
+
+.onSubmitButton {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 0.3in;
+    width: 0.5in;
+    border-color: rgba(73, 73, 73, 0.24);
+    background-color: #282a2b94;
+    border-radius: 0.012in;
+}

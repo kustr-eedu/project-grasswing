@@ -1,0 +1,30 @@
+
+.newsCard {
+    gap: 0.5in;
+    width: 80rem;
+    height: auto;
+    display: grid;
+    padding: 0.3in;
+    border-width: 0.017in;
+    border-style: solid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-color: rgba(73, 73, 73, 0.24);
+    background-color: rgba(27, 30, 31, 0.55);
+    border-radius: 6px;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+}
+
+.main-container {
+    padding-top: 0.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+}
