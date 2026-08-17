@@ -15,7 +15,6 @@ const Initial = ({ locale, lang, data, setData }) => {
       );
 
       setData(res.data.results.slice(0, 4));
-      console.log(res.data.results.slice(0, 4))
 
     } catch (error) {
       console.log(error);

@@ -14,7 +14,6 @@ const News = ({ locale, lang, data, setData }) => {
       );
 
       setData(res.data.results);
-      console.log(res.data.results)
 
     } catch (error) {
       console.log(error);
@@ -33,7 +32,7 @@ const News = ({ locale, lang, data, setData }) => {
       <div className="newsCard">
         {
           data.map((data, index) => {
-            return <NewsCard  key={index} data={data}/>
+            return <NewsCard key={index} data={data}/>
           })
         }
       </div>
