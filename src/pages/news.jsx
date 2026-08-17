@@ -1,7 +1,7 @@
 import { React, useEffect } from "react";
 import NewsCard from "./components/newsCard";
 import GrasswingFooter from "./components/footer";
-import WebsiteSelector from "./components/siteSelector";
+import GrasswingNavbar from "./components/navbar";
 import axios from "axios";
 import "./stylesheet.css";
 
@@ -28,7 +28,7 @@ const News = ({ locale, lang, data, setData }) => {
 
   return (
     <div className="main-container">
-      <WebsiteSelector />
+      <GrasswingNavbar />
       <section />
       <div className="newsCard">
         {

@@ -1,11 +1,11 @@
 import GrasswingFooter from "./components/footer";
-import WebsiteSelector from "./components/siteSelector";
+import GrasswingNavbar from "./components/navbar";
 import "./stylesheet.css";
 
 const Music = () => {
   return (
     <div className="main-container">
-      <WebsiteSelector />
+      <GrasswingNavbar/>
       <section />
       <GrasswingFooter />
     </div>

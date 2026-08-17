@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import axios from "axios";
 import "./newsCard.css";
 import { Link } from "react-router-dom";
 

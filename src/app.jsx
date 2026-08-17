@@ -13,7 +13,7 @@ const GrasswingRouter = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Initial />} />
+        <Route path="/" element={<Initial locale="br" lang="pt" data={data} setData={setData} />} />
         <Route path="/news" element={<News locale="br" lang="pt" data={data} setData={setData} />} />
         <Route path="/music" element={<Music />} />
         <Route path="/notes" element={<Notes />} />

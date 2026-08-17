@@ -1,27 +1,17 @@
-import { useEffect } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
 import "./newsCard.css";
 
-const NewsCardSmall = () => {
+const NewsCardSmall = ({data}) => {
+
+  const { description, image_url, title, link } = data
 
   return (
-    <div className="news-container">
-      <div className="news-card-row">
-        <div className="news-card">
-          <img alt="Image from the news" />
-          <a>Lorem ipsum dolor sit amet eiusmod tempor</a>
-        </div>
-        <section />
-        <div className="news-card">
-          <img alt="Image from the news" />
-          <a>Lorem ipsum dolor sit amet eiusmod tempor</a>
-        </div>
-        <section />
-        <div className="news-card">
-          <img alt="Image from the news" />
-          <a>Lorem ipsum dolor sit amet eiusmod tempor</a>
-        </div>
-        <section />
+    <div className="news-card-grid-container">
+      <div className="news-card">
+        <img src={image_url} className="news-img" alt="Image from the news" />
+        <Link to={link}>
+          <ul className="news-text" >{title}</ul>
+        </Link>
       </div>
     </div>
   );

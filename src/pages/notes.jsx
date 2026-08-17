@@ -1,12 +1,12 @@
 import GrasswingFooter from "./components/footer";
-import WebsiteSelector from "./components/siteSelector";
+import GrasswingNavbar from "./components/navbar";
 import NoteSystem from "./components/noteSystem";
 import "./stylesheet.css";
 
 const Notes = () => {
   return (
     <div className="main-container">
-      <WebsiteSelector />
+      <GrasswingNavbar />
       <section />
       <NoteSystem />
       <section />
