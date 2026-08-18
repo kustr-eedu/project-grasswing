@@ -14,6 +14,13 @@
     justify-content: center;
 }
 
+.news-card-autor {
+    padding-left: 2%;
+    padding-right: 2%;
+    color: rgb(163, 163, 163);
+    display: flex;
+}
+
 .news-card-row {
     height: auto;
     align-self: center;
@@ -36,16 +43,15 @@
 }
 
 .news-text {
+    padding-top: -2%;
     padding-left: 6px;
     padding-right: 6px;
-    padding-top: 2px;
     text-align: justify;
     font-size: 0.18in;
 }
 
 .news-card-grid-container {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+    display: grid;
     gap: 20px;
     width: 100%;
 }

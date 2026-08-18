@@ -5,12 +5,11 @@ a {
 
 .navbar-container {
     display: flex;
-    margin-top: -0.5%;
     box-sizing: border-box;
     justify-content: flex-start;
     border-bottom-left-radius: 0.15in;
     border-bottom-right-radius: 0.15in;
-    border-width: 0.017in;
+    border-width: 0.011in;
     border-style: solid;
     border-color: rgba(73, 73, 73, 0.24);
     width: 100%;
@@ -33,7 +32,7 @@ a {
     margin-right: auto;
     align-self: center;
     align-items: center;
-    border-radius: 0.15in;
+    border-radius: 0.11in;
     border-width: 0.017in;
     border-style: solid;
     border-color: rgba(73, 73, 73, 0.24);
@@ -50,5 +49,5 @@ a {
     width: 22%;
     border-color: rgba(73, 73, 73, 0.24);
     background-color: #282a2b94;
-    border-radius: 0.12in;
+    border-radius: 0.11in;
 }

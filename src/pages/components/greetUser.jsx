@@ -2,6 +2,13 @@ import { useEffect, useState } from "react";
 import "./greetUser.css";
 
 const GreetUser = () => {
+
+  const [weatherData, setWeatherData] = useState(null);
+  const [error, setError] = useState('');
+
+
+
+
   const [time, setTime] = useState();
 
   useEffect(() => {
@@ -19,12 +26,20 @@ const GreetUser = () => {
   }, []);
 
   return (
-
-    <div className="greet-user">
-      <div className="greet-user-text">
-        <a>Hello there, [username]</a>
-        <section />
-        <a>Your time is: {time}</a>
+    <div className="greet-user-container">
+      <div className="greet-user">
+        <div className="greet-user-text">
+          <a>Hello there, [username]</a>
+          <section />
+          <a>Your time is: {time}</a>
+        </div>
+      </div>
+      <div className="greet-user-notes">
+        <div className="notes-text">
+          <a>Your notes are</a>
+          <section />
+          <a>[Insert notes]</a>
+        </div>
       </div>
     </div>
   );

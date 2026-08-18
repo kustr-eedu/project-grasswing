@@ -1,10 +1,43 @@
-.greet-user {
+.greet-user-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-self: center;
+    width: 27.5%
+
+
+
+}
+
+.greet-user-notes {
     background-color: #1e101076;
-    border-radius: 0.15in;
+    border-radius: 0.12in;
     border-width: 0.017in;
     border-style: solid;
     border-color: rgba(73, 73, 73, 0.24);
-    width: 14.25%;
+    width: 85.25%;
+    height: 1in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+}
+
+.notes-text {
+    font-size: 0.175in;
+    color: rgb(163, 163, 163);
+    display: flex;
+    flex-direction: column;
+}
+
+.greet-user {
+    background-color: #1e101076;
+    border-radius: 0.12in;
+    border-width: 0.017in;
+    border-style: solid;
+    border-color: rgba(73, 73, 73, 0.24);
+    width: 90.25%;
     height: 1in;
     display: flex;
     align-items: center;
