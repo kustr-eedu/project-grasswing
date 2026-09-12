@@ -1,16 +1,21 @@
-# React + Vite
+# PROJECT GRASSWING
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Have you ever wondered why can't we have a initial webpage with the essentials built-in, such as news, notes and music? Fret not, this project aims to make it a reality, using React to make it as versatile and practical as possible. 
 
-Currently, two official plugins are available:
+Currently on v1.1.0b, the project is still in early development, with constant updates to design, icons and functionality. Expect issues around the block.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# FEATURES
 
-## React Compiler
+## NEWS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The news is built into the start page and its own dedicated section. It aims to maintain the users informed, with authors, published date, images and the link redirecting the user to the outlet if they're interested. It uses NewsDataAPI to achieve that goal, having 4 articles on the start page and 10 on the dedicated section, allowing for a quick or more focused aim on the daily events.
 
-## Expanding the ESLint configuration
+## NOTES
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The note system serves to remind users of their necessities over the days, with expected controls for addition and removal, quick glance on start and full integration with PostgreSQL to not lose any important task. Expected full release on v1.3.0b. 
+
+## WEATHER
+
+The weather system will be on the navigation bar to guarantee user accessibility to current weather events, such as temperatures. Expected full release on v1.1.5b. 
+
+
