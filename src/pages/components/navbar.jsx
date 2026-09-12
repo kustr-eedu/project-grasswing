@@ -25,7 +25,7 @@ const GrasswingNavbar = () => {
         </button>
       </div>
       <div>
-        <a>Weather in 1.1.5b</a>
+        <a>Weather system in progress</a>
       </div>
     </div>
 
