@@ -32,7 +32,7 @@ const NoteSystem = () => {
           value={task}
         />
         <button className="onSubmitButton">
-          <a>Add note</a>
+          <a>Add a note</a>
         </button>
         <ul>
           {itemsList.map((item, index) => (
