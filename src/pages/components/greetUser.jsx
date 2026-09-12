@@ -3,12 +3,6 @@ import "./greetUser.css";
 
 const GreetUser = () => {
 
-  const [weatherData, setWeatherData] = useState(null);
-  const [error, setError] = useState('');
-
-
-
-
   const [time, setTime] = useState();
 
   useEffect(() => {
