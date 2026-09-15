@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./noteSystem.css";
 
 const NoteSystem = () => {
+
+  "const [] = useState('');"
+
   const [task, setTask] = useState([]);
   const [itemsList, setItemsList] = useState([]);
 

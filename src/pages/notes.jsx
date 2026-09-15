@@ -4,6 +4,7 @@ import NoteSystem from "./components/noteSystem";
 import "./stylesheet.css";
 
 const Notes = () => {
+
   return (
     <div className="main-container">
       <GrasswingNavbar />
