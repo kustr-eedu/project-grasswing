@@ -4,11 +4,15 @@ Have you ever wondered why can't we have a initial webpage with the essentials b
 
 Currently on v1.1.0b, the project is still in early development, with constant updates to design, icons and functionality. Expect issues around the block.
 
+![Alt text](/src/assets/startpage.png)
+
 # FEATURES
 
 ## NEWS
 
 The news is built into the start page and its own dedicated section. It aims to maintain the users informed, with authors, published date, images and the link redirecting the user to the outlet if they're interested. It uses NewsDataAPI to achieve that goal, having 4 articles on the start page and 10 on the dedicated section, allowing for a quick or more focused aim on the daily events.
+
+![Alt text](/src/assets/newspage.png)
 
 ## NOTES
 
