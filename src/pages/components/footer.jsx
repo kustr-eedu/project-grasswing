@@ -49,7 +49,7 @@ const GrasswingFooter = () => {
       <div className="grasswing-footer-links">
         <a className="grasswing-footer-title">Updates</a>
         <section className="vertical" />
-        <a className="grasswing-footer-docs" href="https://zed.dev/docs/">
+        <a className="grasswing-footer-docs" href="https://github.com/kustr-eedu/project-grasswing">
           GitHub
         </a>
         <a className="grasswing-footer-docs" href="https://vite.dev/guide/">
