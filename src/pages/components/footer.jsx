@@ -1,7 +1,6 @@
 import ReactIcon from "./icons/react.svg";
 import ViteIcon from "./icons/vite.svg";
 import ZedIcon from "./icons/zed.svg";
-import GrasswingLogo from "./icons/grasswinglogo.png"
 
 import "./footer.css";
 
@@ -66,7 +65,6 @@ const GrasswingFooter = () => {
           © 2023-2026 Project Grasswing.
           Made with the intent to provide the users with an all-in-one experience for day-to-day use.
         </p>
-       <img className="grasswing-logo" src={GrasswingLogo}/>
       </div>
     </footer>
   );

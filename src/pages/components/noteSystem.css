@@ -4,17 +4,28 @@
     width: 40rem;
     height: 3in;
     display: flex;
-    background-color: rgba(23, 44, 35, 0.67);
+    flex-direction: column;
+    background-color: rgba(23, 44, 35, 0.5);
+    border-color: rgba(73, 73, 73, 0.67);
+    border-style: solid;
+    border-width: 0.017in;
     color: rgba(242, 242, 242, 1);
 }
 
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 0.04in
+
+}
+
 input {
-    width: 1.75in;
-    height: 0.25in;
+    width: 2.25in;
+    height: 0.45in;
     background-color: rgba(33, 33, 33, 1);
     color: rgba(223, 223, 223, 1);
-    border-radius: 0.015%;
-    border-width: 0.0001in;
+    border-radius: 0.05in;
+    border-width: 0.001in;
     border-style: solid;
 }
 
@@ -22,7 +33,7 @@ input {
     justify-content: center;
     align-items: center;
     display: flex;
-    height: 0.3in;
+    height: 0.5in;
     width: 0.5in;
     border-color: rgba(73, 73, 73, 0.24);
     background-color: #282a2b94;

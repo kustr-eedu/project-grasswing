@@ -28,7 +28,7 @@ const NoteSystem = () => {
   return (
     <div className="task-creator">
       <form onSubmit={handleAddItemToList}>
-        <div>
+        <div className="top-bar">
           <input
             type="text"
             placeholder="Feel like creating a note?"
@@ -36,7 +36,7 @@ const NoteSystem = () => {
             value={task}
           />
           <button className="onSubmitButton">
-            <a>Add a note</a>
+            <a>+</a>
           </button>
         </div>
         <ul>
