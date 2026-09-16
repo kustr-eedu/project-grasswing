@@ -1,8 +1,8 @@
 @font-face {
-    font-family: "Satoshi";
+    font-family: "SanFrancisco";
     src:
-        local(Satoshi),
-        url(./assets/Satoshi-Font/Satoshi-Variable.ttf);
+        local(SanFrancisco),
+        url(./assets/San-Francisco-Font/SFPRODISPLAYREGULAR.OTF);
 }
 
 body {
@@ -14,5 +14,5 @@ body {
         rgba(19, 19, 23, 1) 0%,
         rgba(3, 32, 15, 1) 100%
     );
-    font-family: "Satoshi";
+    font-family: "SanFrancisco";
 }
