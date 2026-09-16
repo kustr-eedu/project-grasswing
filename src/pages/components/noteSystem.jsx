@@ -28,15 +28,17 @@ const NoteSystem = () => {
   return (
     <div className="task-creator">
       <form onSubmit={handleAddItemToList}>
-        <input
-          type="text"
-          placeholder="Feel like creating a note?"
-          onChange={handleChangeInput}
-          value={task}
-        />
-        <button className="onSubmitButton">
-          <a>Add a note</a>
-        </button>
+        <div>
+          <input
+            type="text"
+            placeholder="Feel like creating a note?"
+            onChange={handleChangeInput}
+            value={task}
+          />
+          <button className="onSubmitButton">
+            <a>Add a note</a>
+          </button>
+        </div>
         <ul>
           {itemsList.map((item, index) => (
             <li key={index}>{item}</li>

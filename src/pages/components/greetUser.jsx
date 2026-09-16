@@ -23,7 +23,7 @@ const GreetUser = () => {
     <div className="greet-user-container">
       <div className="greet-user">
         <div className="greet-user-text">
-          <a>Hello there, [username]</a>
+          <a>Hello there</a>
           <section />
           <a>Your time is: {time}</a>
         </div>

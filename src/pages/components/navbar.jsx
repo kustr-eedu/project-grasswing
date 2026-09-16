@@ -12,7 +12,7 @@ const GrasswingNavbar = () => {
       <img className="logo" src={GrassWingLogo} alt="Grasswing-Icon" />
       <div className="site-selector">
         <button className="bar-button" onClick={() => window.location.href = "/"}>
-          <a>Main</a>
+          <a>Start</a>
         </button>
         <button className="bar-button" onClick={() => window.location.href = "/news"}>
           <a>News</a>

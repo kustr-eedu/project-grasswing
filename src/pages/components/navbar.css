@@ -32,8 +32,8 @@ a {
     margin-right: auto;
     align-self: center;
     align-items: center;
-    border-radius: 0.11in;
-    border-width: 0.017in;
+    border-radius: 0.10in;
+    border-width: 0.012in;
     border-style: solid;
     border-color: rgba(73, 73, 73, 0.24);
     height: 0.65in;
@@ -47,7 +47,8 @@ a {
     display: flex;
     height: 77.5%;
     width: 22%;
-    border-color: rgba(73, 73, 73, 0.24);
+    border-color: rgba(89, 89, 89, 0.3);
     background-color: #282a2b94;
-    border-radius: 0.11in;
+    border-radius: 0.10in;
+    border-width: 0.012in;
 }

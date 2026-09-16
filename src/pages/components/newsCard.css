@@ -19,6 +19,7 @@
     padding-right: 2%;
     color: rgb(163, 163, 163);
     display: flex;
+    text-transform:capitalize
 }
 
 .news-card-row {
