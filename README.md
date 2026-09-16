@@ -6,6 +6,10 @@ Currently on v1.1.0b, the project is still in early development, with constant u
 
 ![Alt text](/src/assets/startpage.png)
 
+# OBJECTIVE
+
+Project Grasswing has the objective of attending to users' needs, giving them the necessary features of their daily lives to allow for quick and predictable experience on the web. Most "New tab" pages offer few features, such as quick links, which is small compared to what the user should have, which is a hub for their activities and daily events. 
+
 # FEATURES
 
 ## NEWS
