@@ -2,7 +2,7 @@
 
 Have you ever wondered why can't we have a initial webpage with the essentials built-in, such as news, notes and music? Fret not, this project aims to make it a reality, using React to make it as versatile and practical as possible. 
 
-Currently on v1.1.0b, the project is still in early development, with constant updates to design, icons and functionality. Expect issues around the block.
+Currently on v1.1.1b, the project is still in early development, with constant updates to design, icons and functionality. Expect issues around the block.
 
 ![Alt text](/src/assets/startpage.png)
 
