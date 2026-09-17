@@ -13,7 +13,7 @@ a {
     border-style: solid;
     border-color: rgba(73, 73, 73, 0.24);
     width: 100%;
-    height: 1in;
+    height: 0.75in;
     box-shadow: 1px 10px 5px rgba(13, 13, 13, 0.5);
     background-color: rgba(21, 20, 20, 0.5);
 }
@@ -22,8 +22,8 @@ a {
     object-fit: cover;
     padding-left: 0.75%;
     align-self: center;
-    width: 2in;
-    height: 0.85in;
+    width: 1.3in;
+    height: 0.54in;
 
 }
 
@@ -33,11 +33,11 @@ a {
     margin-right: auto;
     align-self: center;
     align-items: center;
-    border-radius: 0.10in;
+    border-radius: 0.09in;
     border-width: 0.012in;
     border-style: solid;
     border-color: rgba(73, 73, 73, 0.24);
-    height: 0.65in;
+    height: 0.45in;
     width: 33.75%;
     background-color: rgba(36, 36, 36, 0.514);
 }

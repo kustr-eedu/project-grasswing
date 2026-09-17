@@ -1,13 +1,7 @@
-section {
-    display: flex;
-    padding-left: 3%;
-}
-
 .news-text {
     padding-top: -2%;
     padding-left: 6px;
     padding-right: 6px;
-    text-align: justify;
     font-size: 0.18in;
 }
 
@@ -15,9 +9,9 @@ section {
     justify-self: center;
     align-self: center;
     width: 97%;
-    height: 1.65in;
+    height: 1.67in;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 0.05in;
 }
 
 .news-card-grid-container {
@@ -25,7 +19,6 @@ section {
     gap: 20px;
     width: 100%;
 }
-
 
 .news-card-autor {
     padding-left: 2%;
@@ -40,7 +33,7 @@ section {
     width: 3in;
     border-radius: 0.09in;
     border-style: solid;
-    border-width: 0.017in;
+    border-width: 0.011in;
     justify-content: center;
     border-color: rgba(73, 73, 73, 0.24);
     background-color: rgba(27, 30, 31, 0.55);
