@@ -59,6 +59,7 @@
 }
 
 .grasswing-footer-copyright {
+    padding-top: 2%;
     display: flex;
     flex-direction: row;
 }

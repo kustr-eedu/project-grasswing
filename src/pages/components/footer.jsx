@@ -63,7 +63,6 @@ const GrasswingFooter = () => {
       <div className="grasswing-footer-copyright">
         <p>
           © 2023-2026 Project Grasswing.
-          Made with the intent to provide the users with an all-in-one experience for day-to-day use.
         </p>
       </div>
     </footer>

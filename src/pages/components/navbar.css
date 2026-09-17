@@ -13,7 +13,7 @@ a {
     border-style: solid;
     border-color: rgba(73, 73, 73, 0.24);
     width: 100%;
-    height: 0.75in;
+    height: 0.8in;
     box-shadow: 1px 10px 5px rgba(13, 13, 13, 0.5);
     background-color: rgba(21, 20, 20, 0.5);
 }
@@ -22,8 +22,8 @@ a {
     object-fit: cover;
     padding-left: 0.75%;
     align-self: center;
-    width: 1.3in;
-    height: 0.54in;
+    width: 1.4in;
+    height: 0.55in;
 
 }
 
@@ -37,7 +37,7 @@ a {
     border-width: 0.012in;
     border-style: solid;
     border-color: rgba(73, 73, 73, 0.24);
-    height: 0.45in;
+    height: 0.5in;
     width: 33.75%;
     background-color: rgba(36, 36, 36, 0.514);
 }
