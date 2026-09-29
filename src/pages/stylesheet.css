@@ -38,7 +38,7 @@
 .containerStart {
     padding: 0.5in;
     display: flex;
-    gap: 0.75in;
+    gap: 0.65in;
     flex-direction: row;
     justify-content: flexbox-start
 }
