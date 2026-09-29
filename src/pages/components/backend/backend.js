@@ -2,12 +2,11 @@ import express from 'express';
 import cors from 'cors';
 import pg from 'pg'
 
-const { Pool } = pg;
-
-
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+const { Pool } = pg;
 
 const pool = new Pool({
   user: process.env.PSQL_USER,
