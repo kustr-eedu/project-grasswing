@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
-import Initial from "./pages/initial";
+import Start from "./pages/start";
 import News from "./pages/news";
 import Music from "./pages/music";
 import Notes from "./pages/notes";
@@ -13,7 +13,7 @@ const GrasswingRouter = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Initial locale="br" lang="pt" data={data} setData={setData} />} />
+        <Route path="/" element={<Start locale="br" lang="pt" data={data} setData={setData} />} />
         <Route path="/news" element={<News locale="br" lang="pt" data={data} setData={setData} />} />
         <Route path="/music" element={<Music />} />
         <Route path="/notes" element={<Notes />} />
