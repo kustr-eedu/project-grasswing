@@ -38,7 +38,7 @@ const GrasswingNavbar = () => {
           <a>Notes</a>
         </button>
         <button className="bar-button" onClick={() => window.location.href ="/music"}>
-          <a>Music</a>
+          <a>Sports</a>
         </button>
       </div>
       <div className="weather-viewer">

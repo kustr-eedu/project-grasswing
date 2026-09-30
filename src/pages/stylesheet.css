@@ -1,6 +1,7 @@
 .newsCard {
     gap: 0.5in;
-    width: 75%;
+    width: 80%;
+    min-height: 80rem;
     height: auto;
     display: grid;
     padding: 0.3in;
@@ -39,9 +40,9 @@
 .containerStart {
     padding: 0.5in;
     display: flex;
-    gap: 0.45in;
+    gap: 0.4in;
     flex-direction: row;
-    justify-content: flexbox-start
+    justify-content: center
 }
 
 .main-container {
