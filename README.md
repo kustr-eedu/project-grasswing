@@ -2,7 +2,7 @@
 
 Have you ever wondered why can't we have a initial webpage with the essentials built-in, such as news, notes and music? Fret not, this project aims to make it a reality, using React to make it as versatile and practical as possible. 
 
-Currently on v1.1.3-beta, the project is still in early development, with constant updates to design, icons and functionality. Expect issues around the block.
+Currently on v1.1.4-beta, the project is still in early development, with constant updates to design, icons and functionality. Expect issues around the block.
 
 ![Alt text](/src/assets/startpage.png)
 
@@ -14,7 +14,7 @@ Project Grasswing has the objective of attending to users' needs, giving them th
 
 ## NEWS
 
-The news is built into the start page and its own dedicated section. It aims to maintain the users informed, with authors, published date, images and the link redirecting the user to the outlet if they're interested. It uses NewsDataAPI to achieve that goal, having 4 articles on the start page and 10 on the dedicated section, allowing for a quick or more focused aim on the daily events.
+The news is built into the start page and its own dedicated section. It aims to maintain the users informed, with authors, published date, images and the link redirecting the user to the outlet if they're interested. It uses NewsDataAPI to achieve that goal, having 3 articles on the start page and 10 on the dedicated section, allowing for a quick or more focused aim on the daily events.
 
 ## NOTES
 
@@ -22,6 +22,6 @@ The note system serves to remind users of their necessities over the days, with 
 
 ## WEATHER
 
-The weather system will be on the navigation bar to guarantee user accessibility to current weather events, such as temperatures. Expected full release on v1.1.5b. 
+The weather is shown on the top-right of the navigation bar, being easily accessible to anyone visiting the page. Being noted as one of the most important information for the users, Project Grasswing aimed at adding the feature to fulfill the users' needs of knowing the current temperature at their time, using OpenWeatherAPI to truly deliver the experience. It was released on v1.1.4-beta
 
 
