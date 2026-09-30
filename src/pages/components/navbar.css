@@ -38,7 +38,7 @@ a {
     border-style: solid;
     border-color: rgba(73, 73, 73, 0.24);
     height: 0.5in;
-    width: 33.75%;
+    width: 32.95%;
     background-color: rgba(36, 36, 36, 0.514);
 }
 
@@ -56,18 +56,18 @@ a {
 }
 
 .weather-viewer {
-    background-color: #1e101076;
+    background-color: rgba(26, 30, 33, 0.5);
     border-radius: 0.09in;
     border-width: 0.010in;
     border-style: solid;
     border-color: rgba(73, 73, 73, 0.24);
-    width: 7%;
+    width: 6.5%;
     height: 0.6in;
     display: flex;
+    margin-right: 1%;
+    justify-self: flex-end;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
     align-self: center;
 
 }
