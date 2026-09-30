@@ -1,5 +1,5 @@
-import "./newsCard.css";
 import { Link } from "react-router-dom";
+import "./newsCard.css";
 
 const NewsCard = ({data}) => {
 
