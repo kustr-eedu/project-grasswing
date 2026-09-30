@@ -1,11 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import GrassWingLogo from "./icons/grasswinglogo.png";
+import axios from "axios";
 import "./navbar.css";
 
 const GrasswingNavbar = () => {
 
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState('');
+
+  const fetchWeather = async () => {
+    try {
+      const res = await axios.get(
+        `https://api.openweathermap.org/data/2.5/weather?lat=-23.50&lon=-47.46&appid=${import.meta.env.VITE_WEATHER}`
+      );
+
+      console.log(res.data);
+
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchWeather();
+  }, []);
 
   return (
     <div className="navbar-container">
@@ -24,8 +42,8 @@ const GrasswingNavbar = () => {
           <a>Music</a>
         </button>
       </div>
-      <div>
-        <a>Weather system in progress</a>
+      <div className="weather-viewer">
+        <a>Weather in v1.1.5-beta</a>
       </div>
     </div>
 

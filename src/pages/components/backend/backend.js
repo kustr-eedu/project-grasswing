@@ -37,5 +37,5 @@ app.get('/api/db-test', async (req, res) => {
 })
 
 app.listen(5432, () => {
-  console.log('Successful connection to postgreSQL')
+  console.log('Connected successfully to database-test')
 })

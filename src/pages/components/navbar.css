@@ -33,7 +33,7 @@ a {
     margin-right: auto;
     align-self: center;
     align-items: center;
-    border-radius: 0.09in;
+    border-radius: 0.07in;
     border-width: 0.012in;
     border-style: solid;
     border-color: rgba(73, 73, 73, 0.24);
@@ -53,4 +53,22 @@ a {
     border-radius: 0.07in;
     border-width: 0.012in;
     font-family: "SanFrancisco"
+}
+
+.weather-viewer {
+    background-color: #1e101076;
+    border-radius: 0.09in;
+    border-width: 0.010in;
+    border-style: solid;
+    border-color: rgba(73, 73, 73, 0.24);
+    width: 12.5%;
+    height: 0.6in;
+    display: flex;
+    flex-direction: flexbox-end;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+
 }
