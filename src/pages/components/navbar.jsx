@@ -6,15 +6,15 @@ import "./navbar.css";
 const GrasswingNavbar = () => {
 
   const [weatherData, setWeatherData] = useState(null);
-  const [error, setError] = useState('');
 
   const fetchWeather = async () => {
     try {
       const res = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=-23.50&lon=-47.46&appid=${import.meta.env.VITE_WEATHER}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=-23.50&lon=-47.46&appid=${import.meta.env.VITE_WEATHER}&units=metric`
       );
 
-      console.log(res.data);
+      setWeatherData(res.data.main);
+      console.log(res.data.main);
 
     } catch (error) {
       console.log(error);
@@ -43,7 +43,14 @@ const GrasswingNavbar = () => {
         </button>
       </div>
       <div className="weather-viewer">
-        <a>Weather in v1.1.5-beta</a>
+        {
+          weatherData ? (
+            <a>{Math.round(weatherData.temp)} °C</a>
+          ) : (
+            <a>Loading...</a>
+          )
+        }
+
       </div>
     </div>
 

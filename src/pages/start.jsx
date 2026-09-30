@@ -15,7 +15,6 @@ const Start = ({ locale, lang, data, setData }) => {
       );
 
       setData(res.data.results.slice(0, 3));
-      console.log(res.data.results.slice(0, 3));
 
     } catch (error) {
       console.log(error);
