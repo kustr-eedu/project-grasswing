@@ -14,7 +14,6 @@ const GrasswingNavbar = () => {
       );
 
       setWeatherData(res.data.main);
-      console.log(res.data.main);
 
     } catch (error) {
       console.log(error);
