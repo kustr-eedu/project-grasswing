@@ -1,6 +1,6 @@
 .newsCard {
     gap: 0.5in;
-    width: 80rem;
+    width: 75%;
     height: auto;
     display: grid;
     padding: 0.3in;
@@ -19,7 +19,8 @@
 
 .newsCardStart {
     gap: 0.45in;
-    width: 62rem;
+    width: 70%;
+    min-height: 25rem;
     height: auto;
     display: grid;
     padding: 0.3in;
