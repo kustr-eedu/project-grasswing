@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "SanFrancisco";
+    src:
+        local(SanFrancisco),
+        url(./assets/San-Francisco-Font/SFPRODISPLAYREGULAR.OTF);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-image: linear-gradient(
+        90deg,
+        rgba(19, 19, 23, 1) 0%,
+        rgba(7, 40, 58, 1) 100%
+    );
+    font-family: "SanFrancisco";
+}

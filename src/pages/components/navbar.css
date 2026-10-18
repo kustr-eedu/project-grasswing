@@ -1,0 +1,73 @@
+a {
+    color: rgba(242, 242, 242, 1);
+    text-decoration: none;
+}
+
+.navbar-container {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    border-bottom-left-radius: 0.09in;
+    border-bottom-right-radius: 0.09in;
+    border-width: 0.011in;
+    border-style: solid;
+    border-color: rgba(73, 73, 73, 0.24);
+    width: 100%;
+    height: 0.8in;
+    box-shadow: 1px 10px 5px rgba(13, 13, 13, 0.5);
+    background-color: rgba(21, 20, 20, 0.5);
+}
+
+.logo {
+    object-fit: cover;
+    padding-left: 0.75%;
+    align-self: center;
+    width: 1.4in;
+    height: 0.55in;
+
+}
+
+.site-selector {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: auto;
+    align-self: center;
+    align-items: center;
+    border-radius: 0.07in;
+    border-width: 0.012in;
+    border-style: solid;
+    border-color: rgba(73, 73, 73, 0.24);
+    height: 0.5in;
+    width: 27%;
+    background-color: rgba(36, 36, 36, 0.514);
+}
+
+.bar-button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 77.5%;
+    width: 28%;
+    border-color: rgba(89, 89, 89, 0.3);
+    background-color: rgba(40, 42, 43, 0.4);
+    border-radius: 0.07in;
+    border-width: 0.012in;
+    font-family: "SanFrancisco"
+}
+
+.weather-viewer {
+    background-color: rgba(41, 42, 43, 0.5);
+    border-radius: 0.09in;
+    border-width: 0.010in;
+    border-style: solid;
+    border-color: rgba(73, 73, 73, 0.24);
+    width: 6.5%;
+    height: 0.6in;
+    display: flex;
+    margin-right: 1%;
+    justify-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+}
