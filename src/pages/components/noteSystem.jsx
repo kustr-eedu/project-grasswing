@@ -3,6 +3,14 @@ import "./noteSystem.css";
 
 const NoteSystem = () => {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  "const [] = useState('');"
+
+>>>>>>> 6ca3947be1f5923c1b51cad1dc82d1ae05b908de
+>>>>>>> 0fa2b90a5790ce79b387df7891d3f642e43b0b6f
   const [task, setTask] = useState([]);
   const [itemsList, setItemsList] = useState([]);
 
