@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "server": "backend.js",
-    "client": "concurrently \"npm run dev\" \"node src/pages/components/backend/backend.js\"",
+    "client": "concurrently \"npm run dev\" \"node src/backend/backend.js\"",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
