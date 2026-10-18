@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import pg from 'pg'
@@ -9,22 +10,21 @@ app.use(express.json());
 const { Pool } = pg;
 
 const pool = new Pool({
+  server: process.env.PSQL_SERV,
+  database: process.env.PSQL_DATABASE,
+  port: process.env.PSQL_PORT,
   user: process.env.PSQL_USER,
-  host: process.env.PSQL_HOST,
-  database: process.env.PSQL_SERV,
   password: process.env.PSQL_KEY,
-  port: process.env.PSQL_PORT
 })
 
-app.get('/api/db-test', async (req, res) => {
+app.get('/api', async (req, res) => {
   try {
-    const result = await pool.query('SELECT NOW() as current_time, version();')
+    const result = await pool.query('SELECT * from notes;')
 
     res.json({
       success: true,
       message: 'Successfully connected to default postgres database',
-      serverTime: result.rows[0].current_time,
-      pgVersion: result.rows[0].version
+      rows: result.rows
     });
   } catch (err) {
     console.error(err);
@@ -36,6 +36,6 @@ app.get('/api/db-test', async (req, res) => {
   }
 })
 
-app.listen(5432, () => {
-  console.log('Connected successfully to database-test')
+app.listen(3001, () => {
+  console.log(process.env.PSQL_USER, process.env.PSQL_DATABASE);
 })
