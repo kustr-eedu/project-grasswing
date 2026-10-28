@@ -17,20 +17,20 @@ const pool = new Pool({
   password: process.env.PSQL_KEY,
 })
 
-app.get('/api', async (req, res) => {
+app.get('/', async (req, res) => {
   try {
     const result = await pool.query('SELECT * from notes;')
 
     res.json({
       success: true,
-      message: 'Established connection with your SQL database!',
+      message: 'Established connection with your SQL database! :)',
       rows: result.rows
     });
   } catch (err) {
     console.error(err);
     res.status(500).json({
       success: false,
-      message: 'The connection with your SQL database was unsuccessful.',
+      message: 'The connection with your SQL database was unsuccessful. :(',
       details: err.message
     })
   }
