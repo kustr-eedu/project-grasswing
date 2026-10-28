@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import pg from 'pg'
+import pg from 'pg';
 
 const app = express();
 app.use(cors());
@@ -23,14 +23,14 @@ app.get('/api', async (req, res) => {
 
     res.json({
       success: true,
-      message: 'Successfully connected to default postgres database',
+      message: 'Established connection with your SQL database!',
       rows: result.rows
     });
   } catch (err) {
     console.error(err);
     res.status(500).json({
       success: false,
-      message: 'Connection to default postgres database was unsuccessful',
+      message: 'The connection with your SQL database was unsuccessful.',
       details: err.message
     })
   }
