@@ -13,14 +13,35 @@ const pool = new Pool({
 const getNotes = async () => {
   try {
     return await new Promise(function (resolve, reject) {
-      pool.query('SELECT * FROM notes', (error, results) => {
+      pool.query('SELECT * FROM notes;', (error, results) => {
         if (error) {
           reject(error);
         }
         if (results && results.rows) {
           resolve(results.rows)
         } else {
-          reject(new Error('No information was found'))
+          reject(new Error("No information was found on this database. :/"))
+        }
+      })
+    })
+  } catch (error_1) {
+    console.error(error_1);
+    throw new Error('Internal server error')
+  }
+}
+
+const createNotes = (body) => {
+  try {
+    const { notes } = body;
+    return new Promise(function (resolve, reject) {
+      pool.query('INSERT INTO notes(notes) VALUES ($2) RETURNING *;', [notes], (error, results) => {
+        if (error) {
+          reject(error);
+        }
+        if (results && results.rows) {
+          resolve(`A new note has been successfully added! :) ${json.stringify(results.rows[0])}`)
+        } else {
+          reject(new Error("Your note couldn't be added successfully. :/"))
         }
       })
     })
