@@ -1,11 +1,15 @@
 import express from 'express';
-import cors from 'cors';
-import pg from 'pg';
 import notes_Modules from './notesModel.js'
 
 const app = express();
-app.use(cors());
+
 app.use(express.json());
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
+  next();
+});
 
 app.get('/', (req, res) => {
   try {
@@ -17,13 +21,13 @@ app.get('/', (req, res) => {
     console.error(err);
     res.status(500).json({
       success: false,
-      message: 'The connection with your SQL database was unsuccessful. :(',
+      message: "The connection with your SQL database was unsuccessful. :(",
       details: err.message
     })
   }
 })
 
-app.post('/create-notes', (req, res) => {
+app.post('/create', (req, res) => {
   try {
     notes_Modules.createNotes(req.body)
       .then(response => {
@@ -31,11 +35,7 @@ app.post('/create-notes', (req, res) => {
       })
   } catch (err) {
     console.error(err);
-    res.status(500).json({
-      success: false,
-      message: 'The connection with your SQL database was unsuccessful. :(',
-      details: err.message
-    })
+    res.status(500).send(err)
   }
 })
 

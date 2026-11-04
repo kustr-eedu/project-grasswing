@@ -58,7 +58,7 @@ const createNotes = (body) => {
         if (results && results.rows) {
           resolve(`A new note has been successfully added! :) ${json.stringify(results.rows[0])}`)
         } else {
-          reject(new Error("Your note couldn't be added successfully. :/"))
+          reject(new Error(`Your note couldn't be added successfully. :/`))
         }
       })
     })
