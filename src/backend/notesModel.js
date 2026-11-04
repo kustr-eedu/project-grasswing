@@ -88,7 +88,7 @@ const updateNotes = (id, body) => {
   };
 }
 
-module.exports = {
+export default {
   getNotes,
   createNotes,
   updateNotes,

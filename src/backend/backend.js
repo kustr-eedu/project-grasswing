@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import pg from 'pg';
+import notes_Modules from './notesModel.js'
 
 const app = express();
 app.use(cors());
@@ -17,15 +18,28 @@ const pool = new Pool({
   password: process.env.PSQL_KEY,
 })
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
   try {
-    const result = await pool.query('SELECT * from notes;')
+    notes_Modules.getNotes()
+      .then(response => {
+        res.status(200).send(response);
+      })
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      success: false,
+      message: 'The connection with your SQL database was unsuccessful. :(',
+      details: err.message
+    })
+  }
+})
 
-    res.json({
-      success: true,
-      message: 'Established connection with your SQL database! :)',
-      rows: result.rows
-    });
+app.post('/create-notes', (req, res) => {
+  try {
+    notes_Modules.createNotes(req.body)
+      .then(response => {
+        res.status(200).send(response);
+      })
   } catch (err) {
     console.error(err);
     res.status(500).json({
