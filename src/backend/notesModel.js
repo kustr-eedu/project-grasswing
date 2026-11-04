@@ -18,7 +18,7 @@ const getNotes = async () => {
         if (error) {
           reject(error);
         }
-        if (results && results.rows) {
+        if (results && results.rows[0]) {
           resolve(results.rows)
         } else {
           reject(new Error("No information was found on this database. :/"))
@@ -38,7 +38,7 @@ const deleteNotes = (id) => {
         if (error) {
           reject(error);
         }
-        resolve(`Your note has been successfully deleted! :) ${json.stringify(results.rows[0])}`)
+        resolve(`Your note has been successfully deleted! :) ${JSON.stringify(results.rows[0])}`)
       })
     })
   } catch (error_1) {
@@ -51,12 +51,14 @@ const createNotes = (body) => {
   try {
     const { notes } = body;
     return new Promise(function (resolve, reject) {
-      pool.query('INSERT INTO notes(notes) VALUES ($2) RETURNING *;', [notes], (error, results) => {
+      pool.query(`INSERT INTO notes (notes) VALUES ($2) RETURNING *`,
+        [notes],
+        (error, results) => {
         if (error) {
           reject(error);
         }
         if (results && results.rows) {
-          resolve(`A new note has been successfully added! :) ${json.stringify(results.rows[0])}`)
+          resolve(`A new note has been successfully added! :) ${JSON.stringify(results.rows[0])}`)
         } else {
           reject(new Error(`Your note couldn't be added successfully. :/`))
         }
@@ -77,7 +79,7 @@ const updateNotes = (id, body) => {
           reject(error);
         }
         if (results && results.rows) {
-          resolve(`A note has been successfully updated! :) ${json.stringify(results.rows[0])}`)
+          resolve(`A note has been successfully updated! :) ${JSON.stringify(results.rows[0])}`)
         } else {
           reject(new Error("Sorry, your note couldn't be updated. :/"))
         }

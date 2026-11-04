@@ -1,15 +1,11 @@
 import express from 'express';
+import cors from 'cors';
 import notes_Modules from './notesModel.js'
 
 const app = express();
 
 app.use(express.json());
-app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
-  next();
-});
+app.use(cors({ origin: 'http://localhost:5173' }));
 
 app.get('/', (req, res) => {
   try {
@@ -17,7 +13,7 @@ app.get('/', (req, res) => {
       .then(response => {
         res.status(200).send(response);
       })
-  } catch (err) {
+  } catch(err) {
     console.error(err);
     res.status(500).json({
       success: false,
@@ -27,13 +23,39 @@ app.get('/', (req, res) => {
   }
 })
 
-app.post('/create', (req, res) => {
+app.post('/create', async (req, res) => {
   try {
     notes_Modules.createNotes(req.body)
       .then(response => {
         res.status(200).send(response);
       })
-  } catch (err) {
+  } catch(err) {
+    console.error(err);
+    res.status(500).send(err)
+  }
+})
+
+app.delete('/delete:id', async (req, res) => {
+  try {
+    notes_Modules.deleteNotes(req.params.id)
+      .then(response => {
+        res.status(200).send(response);
+      })
+  } catch(err) {
+    console.error(err);
+    res.status(500).send(err)
+  }
+})
+
+app.put('/update:id', async (req, res) => {
+  try {
+    const id = req.params.id;
+    const body = req.body;
+    notes_Modules.deleteNotes(id, body)
+      .then(response => {
+        res.status(200).send(response);
+      })
+  } catch(err) {
     console.error(err);
     res.status(500).send(err)
   }
