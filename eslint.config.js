@@ -12,7 +12,7 @@ export default defineConfig([
       "react-hooks/rules-of-hooks": 'error',
       "react-hooks/exhaustive-deps": 'warn'
     },
-    files: ["**/*.{js,jsx}"],
+    files: ["**/*.{js,jsx,mjs,cjs}"],
     extends: [
       js.configs.recommended,
       reactHooks.configs.flat.recommended,
