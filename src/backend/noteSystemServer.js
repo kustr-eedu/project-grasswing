@@ -30,6 +30,22 @@ const getNotes = async () => {
   }
 }
 
+const deleteNotes = (id) => {
+  try {
+    return new Promise(function (resolve, reject) {
+      pool.query('DELETE FROM notes where id = $1;', [id], (error, results) => {
+        if (error) {
+          reject(error);
+        }
+        resolve(`Your note has been successfully deleted! :) ${json.stringify(results.rows[0])}`)
+      })
+    })
+  } catch (error_1) {
+    console.error(error_1);
+    throw new Error('Internal server error')
+  }
+}
+
 const createNotes = (body) => {
   try {
     const { notes } = body;
@@ -49,4 +65,32 @@ const createNotes = (body) => {
     console.error(error_1);
     throw new Error('Internal server error')
   }
+}
+
+const updateNotes = (id, body) => {
+  try {
+    const { notes } = body;
+    return new Promise(function (resolve, reject) {
+      pool.query('UPDATE notes SET note $1 WHERE id = $3 RETURNING *;', [notes, id], (error, results) => {
+        if (error) {
+          reject(error);
+        }
+        if (results && results.rows) {
+          resolve(`A note has been successfully updated! :) ${json.stringify(results.rows[0])}`)
+        } else {
+          reject(new Error("Sorry, your note couldn't be updated. :/"))
+        }
+      })
+    })
+  } catch (error_1) {
+    console.error(error_1);
+    throw new Error('Internal server error')
+  };
+}
+
+module.exports = {
+  getNotes,
+  createNotes,
+  updateNotes,
+  deleteNotes
 }
