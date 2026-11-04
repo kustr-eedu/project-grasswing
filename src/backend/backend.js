@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import pg from 'pg';
@@ -7,16 +6,6 @@ import notes_Modules from './notesModel.js'
 const app = express();
 app.use(cors());
 app.use(express.json());
-
-const { Pool } = pg;
-
-const pool = new Pool({
-  server: process.env.PSQL_SERV,
-  database: process.env.PSQL_DATABASE,
-  port: process.env.PSQL_PORT,
-  user: process.env.PSQL_USER,
-  password: process.env.PSQL_KEY,
-})
 
 app.get('/', (req, res) => {
   try {
