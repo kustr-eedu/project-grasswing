@@ -5,6 +5,7 @@ import "./noteSystem.css";
 const NoteSystem = () => {
 
   const [note, setNotes] = useState([]);
+  const [text, setText] = useState("");
 
   const getNotes = async () => {
     try {
@@ -19,23 +20,16 @@ const NoteSystem = () => {
     }
   };
 
-  function createNotes() {
-    let note = prompt('Enter note text');
-    fetch('http://localhost:3001/create', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({note}),
-    })
-      .then(response => {
-        return response.text();
-      })
-      .then(data => {
-        alert(data);
-        getNotes();
-      });
-  }
+  const createNotes = async () => {
+    if (!text.trim()) return;
+    try {
+      await axios.post("http://localhost:3001/create", { notes: text });
+      setText("");
+      getNotes();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     getNotes();
@@ -48,8 +42,10 @@ const NoteSystem = () => {
           <input
             type="text"
             placeholder="Feel like creating a note?"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
           />
-          <button className="onSubmitButton">
+          <button className="onSubmitButton" onClick={createNotes}>
             <a>+</a>
           </button>
         </div>
