@@ -4,7 +4,7 @@ import pg from 'pg';
 const { Pool } = pg;
 
 const pool = new Pool({
-  server: process.env.PSQL_SERV,
+  host: process.env.PSQL_SERV,
   database: process.env.PSQL_DATABASE,
   port: process.env.PSQL_PORT,
   user: process.env.PSQL_USER,
@@ -51,7 +51,7 @@ const createNotes = (body) => {
   try {
     const { notes } = body;
     return new Promise(function (resolve, reject) {
-      pool.query(`INSERT INTO notes (notes) VALUES ($2) RETURNING *;`,
+      pool.query(`INSERT INTO notes (notes) VALUES ($1) RETURNING *;`,
         [notes],
         (error, results) => {
         if (error) {

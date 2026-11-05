@@ -19,12 +19,11 @@ const NoteSystem = () => {
     }
   };
 
-  const createNotes = async (e) => {
-    e.preventDefault();
+  const createNotes = async () => {
     try {
-      await axios.post(`http://localhost:3001/create`);
+      await axios.post(`http://localhost:3001/create`, { notes: text });
       setText("");
-      getNotes();
+      getNotes();;
     } catch (error) {
       console.log(error);
     }
@@ -44,7 +43,7 @@ const NoteSystem = () => {
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
-          <button className="onSubmitButton" type="submit" onClick={createNotes}>
+          <button className="onSubmitButton" type="button" onClick={createNotes}>
             <a>+</a>
           </button>
         </div>
