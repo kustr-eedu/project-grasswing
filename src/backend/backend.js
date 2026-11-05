@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 
 app.post('/create', async (req, res) => {
   try {
-    notes_Modules.createNotes(req.body)
+    const response = notes_Modules.createNotes(req.body)
       .then(response => {
         res.status(200).send(response);
       })
