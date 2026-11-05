@@ -5,7 +5,7 @@ import notes_Modules from './notesModel.js'
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: 'http://localhost:5173' }));
 
 app.get('/',async (req, res) => {
   try {
