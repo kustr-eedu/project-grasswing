@@ -49,11 +49,11 @@ const NoteSystem = () => {
           </button>
         </div>
         <ul>
-          {Array.isArray(notes) && notes.map((item, index) => (
-            <li key={item?.id || index}>
-              {typeof item === "object" && item !== null ? (item.notes || item.text || JSON.stringify(item)) : item}
+          {notes.map((item, index) => (
+            <li key={item.id || index}>
+             {typeof item === "object" ? item.notes : item}
             </li>
-          ))}
+          )) }
         </ul>
       </form>
     </div>
