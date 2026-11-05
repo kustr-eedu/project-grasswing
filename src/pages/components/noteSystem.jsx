@@ -4,7 +4,7 @@ import "./noteSystem.css";
 
 const NoteSystem = () => {
 
-  const [note, setNotes] = useState([]);
+  const [notes, setNotes] = useState([]);
   const [text, setText] = useState("");
 
   const getNotes = async () => {
@@ -12,7 +12,6 @@ const NoteSystem = () => {
       const res = await axios.get(
         `http://localhost:3001`
       );
-      console.log(res.data);
       setNotes(res.data);
 
     } catch (error) {
@@ -20,10 +19,10 @@ const NoteSystem = () => {
     }
   };
 
-  const createNotes = async () => {
-    if (!text.trim()) return;
+  const createNotes = async (e) => {
+    e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/create", { notes: text });
+      await axios.post(`http://localhost:3001/create`, { notes: text });
       setText("");
       getNotes();
     } catch (error) {
@@ -45,13 +44,15 @@ const NoteSystem = () => {
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
-          <button className="onSubmitButton" onClick={createNotes}>
+          <button className="onSubmitButton" type="submit" onClick={createNotes}>
             <a>+</a>
           </button>
         </div>
         <ul>
-          {note.map((n) => {
-            <li key={n.id}>{n.note}</li>
+          {notes.map((item, index) => {
+            <li key={item.id || index}>
+             {typeof item === "object" ? item.notes : item}
+            </li>
           }) }
         </ul>
       </form>

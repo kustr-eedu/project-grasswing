@@ -14,7 +14,7 @@ const pool = new Pool({
 const getNotes = async () => {
   try {
     return await new Promise(function (resolve, reject) {
-      pool.query('SELECT * FROM notes;', (error, results) => {
+      pool.query(`SELECT * FROM notes;`, (error, results) => {
         if (error) {
           reject(error);
         }
@@ -34,7 +34,7 @@ const getNotes = async () => {
 const deleteNotes = (id) => {
   try {
     return new Promise(function (resolve, reject) {
-      pool.query('DELETE FROM notes where id = $1;', [id], (error, results) => {
+      pool.query(`DELETE FROM notes where id = $1;`, (error, results) => {
         if (error) {
           reject(error);
         }
@@ -51,7 +51,7 @@ const createNotes = (body) => {
   try {
     const { notes } = body;
     return new Promise(function (resolve, reject) {
-      pool.query(`INSERT INTO notes (notes) VALUES ($2) RETURNING *`,
+      pool.query(`INSERT INTO notes (notes) VALUES ($2) RETURNING *;`,
         [notes],
         (error, results) => {
         if (error) {
@@ -72,9 +72,9 @@ const createNotes = (body) => {
 
 const updateNotes = (id, body) => {
   try {
-    const { notes } = body;
+    const { note } = body;
     return new Promise(function (resolve, reject) {
-      pool.query('UPDATE notes SET note $1 WHERE id = $3 RETURNING *;', [notes, id], (error, results) => {
+      pool.query(`UPDATE notes SET note $1 WHERE id = $2 RETURNING *;`, [note, id], (error, results) => {
         if (error) {
           reject(error);
         }
