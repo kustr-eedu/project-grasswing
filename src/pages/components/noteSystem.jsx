@@ -22,7 +22,7 @@ const NoteSystem = () => {
   const createNotes = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:3001/create`, { notes: text });
+      await axios.post(`http://localhost:3001/create`);
       setText("");
       getNotes();
     } catch (error) {
@@ -49,11 +49,11 @@ const NoteSystem = () => {
           </button>
         </div>
         <ul>
-          {notes.map((item, index) => {
-            <li key={item.id || index}>
-             {typeof item === "object" ? item.notes : item}
+          {Array.isArray(notes) && notes.map((item, index) => (
+            <li key={item?.id || index}>
+              {typeof item === "object" && item !== null ? (item.notes || item.text || JSON.stringify(item)) : item}
             </li>
-          }) }
+          ))}
         </ul>
       </form>
     </div>
