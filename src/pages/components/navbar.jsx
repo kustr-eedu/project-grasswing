@@ -27,6 +27,16 @@ const GrasswingNavbar = () => {
   return (
     <div className="navbar-container">
       <img className="logo" src={GrassWingLogo} alt="Grasswing-Icon" />
+      <div className="weather-viewer">
+        {
+          weatherData ? (
+            <a>{Math.round(weatherData.temp)}° Celsius</a>
+          ) : (
+            <a>Loading...</a>
+          )
+        }
+
+      </div>
       <div className="site-selector">
         <button className="bar-button" onClick={() => window.location.href = "/"}>
           <a>Start</a>
@@ -37,16 +47,6 @@ const GrasswingNavbar = () => {
         <button className="bar-button" onClick={() => window.location.href = "/notes"}>
           <a>Notes</a>
         </button>
-      </div>
-      <div className="weather-viewer">
-        {
-          weatherData ? (
-            <a>{Math.round(weatherData.temp)} °C</a>
-          ) : (
-            <a>Loading...</a>
-          )
-        }
-
       </div>
     </div>
 

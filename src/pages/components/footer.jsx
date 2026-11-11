@@ -59,12 +59,6 @@ const GrasswingFooter = () => {
           Code.Overheid.NL
         </a>
       </div>
-      <section className="horizontal" />
-      <div className="grasswing-footer-copyright">
-        <p>
-          © 2023-2026 Campinas Revisited.
-        </p>
-      </div>
     </footer>
   );
 };

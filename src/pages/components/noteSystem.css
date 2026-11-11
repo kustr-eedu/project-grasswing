@@ -8,7 +8,8 @@
     background-color: rgba(23, 44, 35, 0.5);
     border-color: rgba(73, 73, 73, 0.67);
     border-style: solid;
-    border-width: 0.017in;
+    border-width: 0.015in;
+    border-radius: 4px;
     color: rgba(242, 242, 242, 1);
 }
 
@@ -39,4 +40,9 @@ input {
     border-color: rgba(73, 73, 73, 0.24);
     background-color: #282a2b94;
     border-radius: 0.012in;
+}
+
+.noteList {
+   background-color: #282a2b94;
+
 }

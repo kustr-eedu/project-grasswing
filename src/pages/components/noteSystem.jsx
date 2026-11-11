@@ -47,13 +47,15 @@ const NoteSystem = () => {
             <a>+</a>
           </button>
         </div>
-        <ul>
+        <div className="noteList">
+          <ul>
           {notes.map((item, index) => (
             <li key={item.id || index}>
              {typeof item === "object" ? item.notes : item}
             </li>
           )) }
-        </ul>
+          </ul>
+        </div>
       </form>
     </div>
   );
