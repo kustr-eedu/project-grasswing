@@ -38,11 +38,11 @@ input {
     height: 0.5in;
     width: 0.5in;
     border-color: rgba(73, 73, 73, 0.24);
-    background-color: #282a2b94;
+    background-color: rgba(40, 42, 43, 0.58);
     border-radius: 0.012in;
 }
 
 .noteList {
-   background-color: #282a2b94;
+   background-color: rgba(40, 42, 43, 0.58);
 
 }
